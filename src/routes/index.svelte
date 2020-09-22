@@ -9,5 +9,5 @@
 </svelte:head>
 
 <h1 class="is-this-obnoxious?">
-	Hi, I'm Jon Highsmith.
+	Hi, I'm Jon Highsmith. Time to set up CI. Testing, 123.
 </h1>
