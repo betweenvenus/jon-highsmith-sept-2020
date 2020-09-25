@@ -1,14 +1,38 @@
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Black.ttf");
+  font-style: normal;
+  font-weight: 900;
+}
+
 :root {
+  font-size: 24px;
+  line-height: 1.1; /* pretty low */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* vars and such */
+  --yellow: #faff00;
 }
+
 body {
   margin: 0;
-  font-family: "Quicksand", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  color: black;
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 h1,
@@ -18,9 +42,9 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5em 0;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 1.2;
-  font-family: "Syne", Arial, Helvetica, sans-serif;
+  font-family: "Archivo", Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -28,7 +52,18 @@ h1 {
 }
 
 a {
-  color: inherit;
+  color: var(--yellow);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: opacity .20s;
+}
+
+a:hover {
+  opacity: .65;
+}
+
+a.uh-oh  {
+  cursor: pointer;
 }
 
 code {
@@ -38,10 +73,4 @@ code {
   background-color: #f0f0f0;
   padding: 0.2em 0.4em;
   border-radius: 2px;
-}
-
-@media (min-width: 400px) {
-  body {
-    font-size: 16px;
-  }
 }

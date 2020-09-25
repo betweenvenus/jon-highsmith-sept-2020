@@ -2,19 +2,10 @@
 title: Hi, I'm Jon.
 # TODO: Store skill list/fake tags as front matter?
 ---
-I reject
-Both sides of what I'm being told
-I've seen right through
-Now I watch how wild it gets
-I finally achieve
-Balance, balance, balance, balance
-Approaching a delayed
-Rebirth, rebirth, rebirth, rebirth
-I'm positive
-There's no sense to what I'm being sold
-Yet here I go
-I watch how wild we get
-Oh, can you taste your life?
-Balanced, balanced, balanced, balanced
-How will you spend your time?
-Reborn, reborn, reborn, reborn
+I’m a full-stack web developer from Atlanta.
+
+I currently work at <a href="https://mopdog.com" target="blank">Mopdog Creative + Strategy</a>.
+
+I like horror movies, fighting games, reality shows, manual transmissions, and 3D renders of skeletons.
+
+Anyways, <a class="uh-oh">click here</a> to see the things I’m good at :-)

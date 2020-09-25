@@ -1,31 +1,34 @@
 <script>
   import content from "../content/about-jon.md";
-  const { metadata: { title }, html: aboutMe } = content;
-  console.log(content);
+  const {
+    metadata: { title },
+    html: aboutMe,
+  } = content;
 </script>
 
 <style>
+  .rapper {
+    padding: 5% 10%;
+  }
   .is-this-obnoxious\? {
-    font-size: 5rem;
-    mix-blend-mode: difference;
+    font-size: 3rem;
+    text-transform: uppercase;
     color: white;
   }
 
-  .probably\,.if.i.had.to.guess {
-    font-size: 3rem;
+  .if.i.had.to.guess\,.the.answer.would.be.yes {
+    font-size: 1.5rem;
   }
-
 </style>
 
 <svelte:head>
   <title>Jon Highsmith</title>
 </svelte:head>
-
-<h1 class="is-this-obnoxious?">{title}</h1>
-<h2 class="probably, if i had to guess">I'm Jon!!!</h2>
-
-{#if content}
-  {@html aboutMe}
-{/if}
-
-<img src="/img/the_compact_disc(光盤).png" alt="">
+<div class="rapper">
+  <h1 class="is-this-obnoxious?">{title}</h1>
+  {#if content}
+    <section class="if i had to guess, the answer would be yes">
+      {@html aboutMe}
+    </section>
+  {/if}
+</div>
