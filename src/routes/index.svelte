@@ -1,6 +1,7 @@
 <script>
-  import intro from "../content/intro.md";
-  console.log(intro);
+  import content from "../content/about-jon.md";
+  const { metadata: { title }, html: aboutMe } = content;
+  console.log(content);
 </script>
 
 <style>
@@ -20,11 +21,11 @@
   <title>Jon Highsmith</title>
 </svelte:head>
 
-<h1 class="is-this-obnoxious?">Hi there :-)</h1>
+<h1 class="is-this-obnoxious?">{title}</h1>
 <h2 class="probably, if i had to guess">I'm Jon!!!</h2>
 
-{#if intro}
-  {@html intro.html}
+{#if content}
+  {@html aboutMe}
 {/if}
 
 <img src="/img/the_compact_disc(光盤).png" alt="">

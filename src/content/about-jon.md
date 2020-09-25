@@ -1,6 +1,6 @@
 ---
-title: Some stuff
-summary: Some other stuff
+title: Hi, I'm Jon.
+# TODO: Store skill list/fake tags as front matter?
 ---
 I reject
 Both sides of what I'm being told
