@@ -10,15 +10,27 @@ main {
   background-color: white;
   padding: 0 10% 0 10%;
   position: relative;
+  overflow: hidden; 
 }
 
-.main::before {
+@keyframes read-only {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main::before {
+  content: "";
+  width: 300%;
+  height: 300%;
   position: absolute;
-  top: 0;
-  left: 0;
   background-image: url('/img/the_compact_disc[光盤].png');
   background-repeat: no-repeat;
-  background-size: 2000px;
+  background-size: cover;
+  animation: read-only 8s linear infinite;
 }
 
 :global(main *) {
