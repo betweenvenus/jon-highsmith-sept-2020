@@ -24,13 +24,16 @@ main {
 
 main::before {
   content: "";
-  width: 300%;
-  height: 300%;
+  width: 200%;
+  height: 200%;
   position: absolute;
+  top: -100%;
+  left: -100%;
   background-image: url('/img/the_compact_disc[光盤].png');
   background-repeat: no-repeat;
-  background-size: cover;
-  animation: read-only 8s linear infinite;
+  background-size: contain;
+  background-position: center;
+  animation: read-only 16s steps(20) infinite;
 }
 
 :global(main *) {
