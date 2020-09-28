@@ -8,4 +8,4 @@ I currently work at <a href="https://mopdog.com" target="blank">Mopdog Creative 
 
 I like horror movies, fighting games, reality shows, manual transmissions, and 3D renders of skeletons.
 
-<!-- Anyways, <a class="uh-oh">click here</a> to see the things I’m good at :-) -->
+Anyways, <a class="uh-oh">click here</a> to see the things I’m good at :-)

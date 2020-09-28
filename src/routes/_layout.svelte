@@ -11,6 +11,7 @@ main {
   padding: 0 10% 0 10%;
   position: relative;
   overflow: hidden; 
+  z-index: -2;
 }
 
 @keyframes read-only {
@@ -33,12 +34,13 @@ main::before {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  animation: read-only 16s steps(20) infinite;
+  animation: read-only 16s linear infinite;
+  z-index: -1;
 }
 
-:global(main *) {
+/* :global(main *) {
   mix-blend-mode: exclusion;
-}
+} */
 </style>
 
 <main>
