@@ -4,6 +4,10 @@
     metadata: { title },
     html: aboutMe,
   } = content;
+
+  import createVector from "../js/createVector.js";
+
+  const myVector = createVector(2, 5);
 </script>
 
 <style>
@@ -29,6 +33,9 @@
 </svelte:head>
 <div class="rapper">
   <h1 class="is-this-obnoxious?">{title}</h1>
+  <h2>Vector X: { myVector.x }</h2>
+  <h2>Vector Y: { myVector.y }</h2>
+  <h2>Vector magnitude: { myVector.magnitude }</h2>
   {#if content}
     <section class="if i had to guess, the answer would be yes">
       {@html aboutMe}
