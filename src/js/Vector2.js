@@ -1,5 +1,6 @@
 /**
  * Two-dimensional vector type.
+ * @returns Vector2
  */
 class Vector2 {
     constructor(x, y) {
