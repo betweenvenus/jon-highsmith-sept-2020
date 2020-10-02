@@ -1,11 +1,17 @@
 <script>
+    /**
+     * All credit must go to this amazing article: 
+     * https://www.toptal.com/game/video-game-physics-part-i-an-introduction-to-rigid-body-dynamics
+     * 
+     */
+
     import createVector from "../js/createVector.js";
     import Particle from "../js/Particle.js";
     import { sleep } from "../js/helpers.js";
 
     // props
-    export let particleCount;
-    export let gravity;
+    export let particleCount = 1;
+    export let gravity = -9.81;
 
     const PARTICLE_COUNT = particleCount;
     const particles = [];
