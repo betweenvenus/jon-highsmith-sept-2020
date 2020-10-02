@@ -43,15 +43,15 @@
     }
 
     const run = async () => {
-        const simulationTime = 1000;
+        const simulationTime = 10000;
         let currentTime = 0;
-        const dt = 100;
+        const dt = 1000;
 
         initParticles();
         printParticles();
 
         while(currentTime < simulationTime) {
-            sleep(dt);
+            await sleep(dt);
             for(let i = 0; i < PARTICLE_COUNT; i++) {
                 let particle = particles[i];
                 let force = computeForce(particle);
