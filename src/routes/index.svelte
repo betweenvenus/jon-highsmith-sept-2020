@@ -35,7 +35,7 @@
 </svelte:head>
 <div class="rapper">
   <h1 class="is-this-obnoxious?">{title}</h1>
-  <ParticleSimulation />
+  <ParticleSimulation particleCount={1} gravity={-9.81} />
   {#if content}
     <section class="if i had to guess, the answer would be yes">
       {@html aboutMe}
