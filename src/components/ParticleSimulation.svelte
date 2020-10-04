@@ -13,10 +13,10 @@
     export let particleCount = 1;
     export let gravity = -9.81;
 
-    const PARTICLE_COUNT = particleCount;
+    const PARTICLE_COUNT = parseFloat(particleCount);
     const particles = [];
     // https://en.wikipedia.org/wiki/Gravity_of_Earth
-    const GRAVITY = gravity;
+    const GRAVITY = parseFloat(gravity);
 
     const initParticles = () => {
         const r = coefficient => Math.random() * coefficient;
@@ -50,11 +50,19 @@
         initParticles();
         printParticles();
 
+        /**
+         * TODO: when it's time to actually paint the screen, i'm guessing
+         * i'll need to create better loop patterns, probably with
+         * requestAnimationFrame() and some kind of stateful
+         * deltaTime function that keeps track of draw time
+         */
+
         while(currentTime < simulationTime) {
             await sleep(dt);
             for(let i = 0; i < PARTICLE_COUNT; i++) {
                 let particle = particles[i];
                 let force = computeForce(particle);
+                console.log(force)
                 let acceleration = createVector(force.x / particle.mass, force.y / particle.mass);
                 particle.velocity.x += acceleration.x * dt;
                 particle.velocity.y += acceleration.y * dt;
