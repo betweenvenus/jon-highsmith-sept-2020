@@ -22,7 +22,7 @@
         const r = coefficient => Math.random() * coefficient;
         for (let i = 0; i < PARTICLE_COUNT; i++) {
             particles[i] = new Particle();
-            console.log(particles[i]);
+            // console.log(particles[i]);
             particles[i].position = createVector(r(50), r(50));
             particles[i].velocity = createVector(0, 0);
             particles[i].mass = 1;
@@ -33,6 +33,7 @@
         for (let i = 0; i < PARTICLE_COUNT; i++) {
             const particle = particles[i];
             console.log(
+                `particles[${i}].velocity.y: ${particle.velocity.y} \n`,
                 `particles[${i}]: (x: ${particle.position.x}, y: ${particle.position.y})`
             );
         }
@@ -62,12 +63,11 @@
             for(let i = 0; i < PARTICLE_COUNT; i++) {
                 let particle = particles[i];
                 let force = computeForce(particle);
-                console.log(force)
                 let acceleration = createVector(force.x / particle.mass, force.y / particle.mass);
-                particle.velocity.x += acceleration.x * dt;
-                particle.velocity.y += acceleration.y * dt;
-                particle.position.x += particle.velocity.x * dt;
-                particle.position.y += particle.velocity.y * dt;
+                particle.velocity.x += acceleration.x * (dt / 1000);
+                particle.velocity.y += acceleration.y * (dt / 1000);
+                particle.position.x += particle.velocity.x * (dt / 1000);
+                particle.position.y += particle.velocity.y * (dt / 1000);
             }
 
             printParticles();

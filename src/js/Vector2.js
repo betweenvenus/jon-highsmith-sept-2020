@@ -8,6 +8,11 @@ class Vector2 {
         this.y = y;
         this.magnitude = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
+
+    static add();
+    static subtract();
+    static multiply();
+    static divide();
 }
 
 export default Vector2;
