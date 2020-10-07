@@ -9,7 +9,7 @@ main {
   padding: 0 10% 0 10%;
   position: relative;
   overflow: hidden; 
-  z-index: -2;
+  z-index: 0;
 }
 
 @keyframes read-only {
@@ -23,11 +23,11 @@ main {
 
 main::before {
   content: "";
-  width: 200%;
-  height: 200%;
+  width: 150%;
+  height: 150%;
   position: absolute;
-  top: -100%;
-  left: -100%;
+  top: -75%;
+  left: -75%;
   background-image: url('/img/the_compact_disc[光盤].png');
   background-repeat: no-repeat;
   background-size: contain;
